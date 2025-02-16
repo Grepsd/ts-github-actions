@@ -7,6 +7,8 @@ on:
   pull_request:
     branches:
       - main
+  create:
+    ref_type: tag
 jobs:
   build:
     runs-on: ubuntu-latest
