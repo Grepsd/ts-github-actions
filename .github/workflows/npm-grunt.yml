@@ -37,6 +37,11 @@ jobs:
           echo ${{ github.ref_name }}
           docker run --rm -u "$(id -u):$(id -g)" \
            -v "$(pwd):/home/debian/src" terrastruct/d2:v0.6.9 test.d2
+      - uses: actions/upload-artifact@v4
+        with:
+          name: diagram
+          path: ./test.svg
+          retention-days: 1
       - name: Create Release
         uses: softprops/action-gh-release@v2
         with:
