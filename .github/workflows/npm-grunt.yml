@@ -38,7 +38,7 @@ jobs:
            -v "$(pwd):/home/debian/src" terrastruct/d2:v0.6.9 test.d2
       - name: Create Release
         uses: softprops/action-gh-release@v2
-        token: ${{ secrets.RELEASE_TOKEN }}
         with:
+          token: ${{ secrets.RELEASE_TOKEN }}
           files: |
             test.svg
