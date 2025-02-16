@@ -1,11 +1,15 @@
-import express from 'express';
+import express, { Application } from "express";
 
-const app = express();
+const PORT = process.env.PORT || 8000;
 
-app.get('/', (req, res) => {
-    res.send('This is a test web page!');
-})
+const app: Application = express();
 
-app.listen(3000, () => {
-    console.log('The application is listening on port 3000!');
-})
+app.get("/ping", async (_req, res) => {
+  res.send({
+    message: "pong",
+  });
+});
+
+app.listen(PORT, () => {
+  console.log("Server is running on port", PORT);
+});
