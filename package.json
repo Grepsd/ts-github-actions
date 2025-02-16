@@ -18,7 +18,8 @@
   "homepage": "https://github.com/Grepsd/ts-github-actions#readme",
   "description": "",
   "dependencies": {
-    "express": "^4.21.2"
+    "express": "^4.21.2",
+    "grunt-contrib-uglify": "^5.2.2"
   },
   "devDependencies": {
     "@types/express": "^5.0.0",
